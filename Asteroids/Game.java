@@ -34,7 +34,7 @@ public class Game extends GameObject {
     @Override
     public void step() {
         super.step();
-        if (a.nextDouble() < 2 / FPS) {
+        if (a.nextDouble() < 2.0 / FPS) {
             GameObject asteroid = new Asteroid();
         }
     }

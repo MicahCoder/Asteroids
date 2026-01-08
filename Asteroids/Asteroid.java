@@ -8,9 +8,9 @@ public class Asteroid extends GameObject {
     public Asteroid() {
 
         super(0, 0, "asteroid");
-        rand = new Random();
-        setPosition(rand.nextDouble() * 540 + 30, 570);
-        setRadius(16);
+       rand = new Random();
+       setPosition(rand.nextDouble() * 540 + 30, 570);
+       setRadius(16);
         setTeam(2);
         setVelocity(0, -5);
 
