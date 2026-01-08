@@ -1,0 +1,26 @@
+!SESSION 2026-01-07 11:27:05.842 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -keyring /Users/Period4/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -keyring /Users/Period4/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-07 11:27:08.941
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-07 11:27:20.133
+!MESSAGE Logback config file: /Users/Period4/eclipse-workspace/Asteroids/Asteroids/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
+!SESSION 2026-01-07 11:28:02.324 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product -keyring /Users/Period4/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.dsl.product -keyring /Users/Period4/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-07 11:28:05.167
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-07 11:28:17.113
+!MESSAGE Logback config file: /Users/Period4/eclipse-workspace/Asteroids/Asteroids/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.101.20251017-1242.xml
