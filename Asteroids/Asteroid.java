@@ -11,14 +11,14 @@ public class Asteroid extends GameObject {
 
         super(0, 0, "asteroid");
         rand = new Random();
-        setPosition(rand.nextDouble() * 540 + 30, 570);
+        setPosition(rand.nextDouble() * 540 + 30, 600);
         setRadius(16);
         setTeam(2);
         setVelocity(0, -5);
 
     }
 
-    public void offScreen() {
+    public void offBottom() {
         die();
     }
 
@@ -34,5 +34,11 @@ public class Asteroid extends GameObject {
     public void draw(Graphics g) {
         super.draw(g);
         drawCircle(g, Color.YELLOW);
+    }
+
+    @Override
+    public void die() {
+        new GameObject(getX(), getY(), "explosion");
+        super.die();
     }
 }
