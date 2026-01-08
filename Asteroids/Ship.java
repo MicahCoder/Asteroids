@@ -1,7 +1,7 @@
 
 public class Ship extends GameObject {
 
-    private static final double SPEED = 5.0;
+    private static final double SPEED = 10.0;
     private int shotsLeft;
     private int shields;
 

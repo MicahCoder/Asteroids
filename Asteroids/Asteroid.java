@@ -14,12 +14,16 @@ public class Asteroid extends GameObject {
         setPosition(rand.nextDouble() * 540 + 30, 600);
         setRadius(16);
         setTeam(2);
-        setVelocity(0, -5);
+        setVelocity(rand.nextDouble() * 2 - 1, -5);
 
     }
 
     public void offBottom() {
         die();
+    }
+
+    @Override
+    public void offTop() {
     }
 
     @Override
