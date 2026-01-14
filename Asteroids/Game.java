@@ -17,24 +17,40 @@ import java.util.Random;
  */
 public class Game extends GameObject {
 
-    private final static int FPS = 20;
+    public final static int FPS = 20;
+    private double spawnRate = 0.0;
+    private double spawnAcceleration = .1;
     private final Random a;
 
-    /*
-     * A game is constructed once, at the very start of each game.
+    /**
+     * Constructs the Game instance, creates and wires together global UI
+     * components (life/laser counters) and the player's Ship and initial
+     * Powerup. This runs once at the start of each game.
      */
     public Game() {
         super(); // The game is an invisible object
+
         a = new Random();
-        new Ship(300, 30);
+        LifeCounter lifeCounter = new LifeCounter();
+        LaserCounter laserCounter = new LaserCounter();
+        Ship ship = new Ship(300, 30, lives -> lifeCounter.update(lives),
+                lasers -> laserCounter.update(lasers));
+        new Powerup(200, 200, ship);
         // Now, when keys are pressed, the methods this object has for
         // dealing with those keys will be called.
     }
 
+    /**
+     * Called once per frame; advances the power-up ticker and occasionally
+     * spawns a new Asteroid with a probabilistic rate determined by FPS.
+     */
     @Override
     public void step() {
         super.step();
-        if (a.nextDouble() < 2.0 / FPS) {
+        Powerup.tickPowerup();
+        //Acelerates the rate of asteroid creation. 
+        spawnRate += spawnAcceleration / FPS;
+        if (a.nextDouble() < spawnRate / FPS) {
             GameObject asteroid = new Asteroid();
         }
     }
